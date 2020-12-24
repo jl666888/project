@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     Grid:function(val){
-      this.one = this.grid.indexOf(val)
+      this.$router.push({path:'/location',query:{num:this.grid.indexOf(val)}})
     }
   }
 };
