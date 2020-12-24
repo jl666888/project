@@ -5,7 +5,7 @@ import Location from './Location/Location'
 Vue.use(VueRouter)
 
 const routes = [
-  Course,
+  ...Course,
   Location
 ]
 

@@ -33,9 +33,15 @@ export default {
       one:''
     }
   },
+  created(){
+    this.$store.commit('setGrid',this.grid)
+  },
   methods:{
+    //跳路由
     Grid:function(val){
-      this.$router.push({path:'/location',query:{num:this.grid.indexOf(val)}})
+      if(this.grid.indexOf(val) !== 3){
+      this.$router.push({path:'/title',query:{id:this.grid.indexOf(val)}})
+      }
     }
   }
 };
